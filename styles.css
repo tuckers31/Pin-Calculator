@@ -1,0 +1,55 @@
+body {
+    font-family: Helvetica;
+    background-color: #181818;
+    color: white;
+    margin-left: 20px;
+}
+
+
+h2 {
+    margin-top: 9px;
+}
+
+p {
+    font-family: monospace;
+    font-size: 1.1875rem;
+}
+
+span {
+    font-family: monospace;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+}
+
+input {
+    background-color: #030303;
+    color: white;
+    border: 0.5px solid lightblue;
+    font-family: monospace;
+    margin-bottom: 13px;
+}
+
+button {
+    background-color: lightblue;
+    border: 0.5px solid black;
+}
+
+button:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: rgb(7, 7, 177);
+    color: white;
+    border: 0.5px solid white;
+}
+
+#result,
+#total-length,
+#ceiling-result {
+    display: none;
+}

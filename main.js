@@ -7,7 +7,7 @@ const submitButton = document.querySelector('#submit-button')
 const clearButton = document.querySelector('#clear-button');
 const lengthElem = document.querySelector('#total-length');
 const resultElem = document.querySelector('#result');
-const ceilingElem = document.querySelector('#celing-result');
+const ceilingElem = document.querySelector('#ceiling-result');
 
 function calcCeilingPinLocations(wallPins, ceilingPanels) {
     // Create an empty object to store the calculated pin locations
@@ -86,15 +86,19 @@ function clearField(lengthElem, resultElem) {
     resultElem.style.display = 'none';
 }
 
-function displayCeilingCalculations(ceilingPinArr, ceilingElem) {
-    if (isNaN(ceilingPinArr) || ceilingPinArr === 0) {
+function displayCeilingCalculations(ceilingPinObj, ceilingElem) {
+    if (!ceilingPinObj) {
         ceilingElem.style.display = 'block';
         ceilingElem.innerText = 'Invalid Input';
         return;
     };
+    let ceilingPinArr = []
+    for (let panel in ceilingPinObj) {
+        ceilingPinArr.push(panel)
+    }
+    console.log(ceilingPinArr)
     pinString = ceilingPinArr.join('", ');
-    resultElem.innerText = `Pin Locations: ${pinString}"`;
-    resultElem.style.display = 'block';
+    ceilingElem.innerText = `Pin Locations: ${pinString}"`;
     ceilingElem.style.display = 'block';
 }
 

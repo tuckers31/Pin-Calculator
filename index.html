@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pin Calculator</title>
     <link rel="stylesheet" href="./styles.css">
-    <script src="./main.js" type="modules"></script>
+    <script src="./main.js" type="text/javascript" defer></script>
 </head>
 <body>
     <header>
@@ -14,9 +14,9 @@
     </header>
     <div>
         <label for="panel-string">Enter each panel separated <span>', '</span></label>
-        <input type="text" name="panel-string" id="length-input" required value="">
+        <input type="text" name="panel-string" id="length-input" required value="22.125, 23, 47, 3.5">
         <label for="ceiling-string">Ceiling or Floor Panels</label>
-        <input type="text" name="ceiling-string" id="ceiling-input" required value="">
+        <input type="text" name="ceiling-string" id="ceiling-input" required value="47, 23, 25.75">
         <label for="door-frame">Door Frame</label>
         <input type="number" name="door-frame" id="door-frame" value="47.125">
         <button id="submit-button">Calculate</button>
@@ -29,6 +29,5 @@
         <h2>Ceiling/Floor Locations</h2>
         <p id="ceiling-result"></p>
     </div>
-    
 </body>
 </html>
